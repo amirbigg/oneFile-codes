@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+	
+	<style>
+	
+	*{
+	margin: 0;
+	padding: 0;
+}
+.accordion-toggle{
+	cursor: pointer;
+	background-color: #0C072D;
+	color: white;
+	padding: 30px;
+	border: 1px solid #0C072D;
+}
+
+.accordion-toggle:hover{
+	border: 1px solid #555A92;
+}
+
+.accordion-content{
+	display: none;
+	background-color: #BCBEFF;
+	padding: 30px;
+}
+
+i.fa{
+	float: right;
+}
+	
+	</style>
+	
+	
+</head>
+
+<body>
+
+	<div id="accordion">
+	
+		<h4 class="accordion-toggle">Accordion 1<i class="fa fa-chevron-down" aria-hidden="true"></i></h4>
+		 <p class="accordion-content">Cras malesuada ultrices augue molestie risus.</p>
+	  
+	  <h4 class="accordion-toggle">Accordion 2<i class="fa fa-chevron-down" aria-hidden="true"></i></h4>
+		 <p class="accordion-content">Lorem ipsum dolor sit amet mauris eu turpis.</p>
+	  
+	  <h4 class="accordion-toggle">Accordion 3<i class="fa fa-chevron-down" aria-hidden="true"></i></h4>
+		 <p class="accordion-content">Vivamus facilisisnibh scelerisque laoreet.</p>
+
+	</div>
+
+
+
+
+	<script
+	src="https://code.jquery.com/jquery-2.2.4.js"
+	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+	crossorigin="anonymous">
+</script> <!------ do not forget to include jquery file. ------>
+	
+	<script>
+	$("#accordion").find(".accordion-toggle").click(function(){
+	$(this).next().slideToggle();
+	$(".accordion-content").not($(this).next()).slideUp();
+});
+	</script>
+</body>
+</html>

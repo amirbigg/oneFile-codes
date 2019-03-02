@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Test</title>
+	<meta charset="utf-8"/>
+	<style>
+	
+	
+body{
+	margin-top: 100px;
+	line-height: 1.6;
+}
+
+.container{
+	width: 800px;
+	margin: 0 auto;
+}
+
+ul.tabs{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.tabs li{
+	background: none;
+	color: #222;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+ul.tabs li.current{
+	background: #ededed;
+	color: #222;
+}
+
+.tab-content{
+	display: none;
+	background: #ededed;
+	padding: 15px;
+}
+
+.tab-content.current{
+	display: inherit;
+}
+	
+	</style>
+</head>
+
+<body>
+<div class="container">
+	
+	<ul class="tabs">
+		<li class="tab-link current" data-tab="tab-1">Tab 1</li>
+		<li class="tab-link" data-tab="tab-2">Tab 2</li>
+		<li class="tab-link" data-tab="tab-3">Tab 3</li>
+	</ul>
+	
+	<div id="tab-1" class="tab-content current">
+		In this tutorial there will be some examples that are better explained by displaying the result in the command line interface.
+	</div>
+	
+	<div id="tab-2" class="tab-content">
+		There is a very good module for working with file uploads, called "Formidable".The Formidable module c
+		an be downloaded and installed using NPM:
+	</div>
+	
+	<div id="tab-3" class="tab-content">
+		Include the Formidable module to be able to parse the uploaded file once it reaches the server.When the 
+		file is uploaded and parsed, it gets placed on a temporary folder on your computer.
+	</div>
+	
+</div>
+
+	<script
+			  src="https://code.jquery.com/jquery-2.2.4.js"
+			  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+			  crossorigin="anonymous"></script>  <!----------------- do not forget to include jquery ------------------->
+	<script>
+		$("ul.tabs li").click(function(){
+			var tab_id = $(this).attr("data-tab");
+			$("ul.tabs li").removeClass("current");
+			$("div.tab-content").removeClass("current");
+			$(this).addClass("current");
+			$("#"+tab_id).addClass("current");
+		});
+	</script>
+</body>
+</html>

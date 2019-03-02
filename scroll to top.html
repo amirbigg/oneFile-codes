@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link href="CSS.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+<style>
+
+	.top{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 1;
+	background-color: #131227;
+	color: #fdfdfd;
+	font-size: 20px;
+	padding: 10px;
+	cursor: pointer;
+	display: none;
+}
+
+.top:hover{
+	background-color: #2A2B49;
+	color: wheat;
+}
+.show{
+	display: block;
+}
+	
+</style>
+</head>
+
+<body>
+
+	<a href="#" class="top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a>
+	<img src="1.jpg"/>
+	<img src="2.jpg"/>
+	<img src="3.jpg"/>
+	<img src="4.jpg"/>
+
+
+
+
+
+	<script>
+	
+	if($(".top").length){
+	var scrollTrigger = 100,
+		 backToTop = function(){
+			 var scrollTop = $(window).scrollTop();
+			 if(scrollTrigger < scrollTop){
+				 $(".top").slideDown(".top");
+			 }else{
+				 $(".top").slideUp(".top");
+			 }
+		 };
+	$(window).on("scroll",function(){
+		backToTop();
+	});
+	$(".top").on('click', function(e){
+		e.preventDefault();
+		$("html, body").animate({scrollTop : 0},800);
+	});
+}
+	
+	</script>
+	<script src="jquety.js"></script> <!------ remember this. include jquery.	------> 
+</body>
+</html>
