@@ -25,5 +25,5 @@ class Slugipy:
         return value.lower()
 
 
-s = Slugipy('سلام به همه', lower=True)
+s = Slugipy('Hello everybody', lower=True)
 print(s.slug())
