@@ -1,0 +1,12 @@
+<url>
+     <loc></loc>
+     <video:video>
+       <video:thumbnail_loc></video:thumbnail_loc>
+       <video:title></video:title>
+       <video:description></video:description>
+       <video:content_loc></video:content_loc>
+       <video:duration></video:duration>
+       <video:family_friendly>yes</video:family_friendly>
+       <video:requires_subscription>yes</video:requires_subscription>
+     </video:video>
+</url>
